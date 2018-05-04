@@ -1,0 +1,21 @@
+{
+  "name": "@ionic/source",
+  "version": "0.0.1",
+  "description": "Ionic mono-repo root package.json, used mainly to execute build scripts. This package is not published to npm.",
+  "private": true,
+  "scripts": {
+    "release.prepare": "node .scripts/prepare.js",
+    "release": "node .scripts/release.js",
+    "changelog": "conventional-changelog -p angular -i ./CHANGELOG.md -k core -s"
+  },
+  "devDependencies": {
+    "@octokit/rest": "^15.2.6",
+    "chalk": "^2.3.2",
+    "conventional-changelog-cli": "^1.3.16",
+    "execa": "^0.10.0",
+    "fs-extra": "^5.0.0",
+    "inquirer": "^5.1.0",
+    "listr": "^0.14.0",
+    "semver": "^5.5.0"
+  }
+}
